@@ -2,7 +2,7 @@
 
 import type { ButtonProps, CarouselApi } from "@relume_io/relume-ui";
 import {
-  Button,
+  // Button,
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -55,7 +55,7 @@ export const Testimonial23 = (props: Testimonial23Props) => {
   }, [api]);
 
   return (
-    <section id="relume" className="px-[5%] py-0 md:py-24 lg:py-28 -translate-y-72">
+    <section id="relume" className="px-[5%] py-0 md:py-24 lg:py-28 translate-y-0">
       <div className="container -translate-y-16">
         <div className="container mb-8 max-w-lg text-center md:mb-18 lg:mb-20">
           <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h1>
@@ -104,15 +104,7 @@ export const Testimonial23 = (props: Testimonial23Props) => {
                     </div>
                   </div>
                   <div className="mt-6 py-1 md:mt-8">
-                    <Button
-                      variant={testimonial.button.variant}
-                      size={testimonial.button.size}
-                      iconRight={testimonial.button.iconRight}
-                      iconLeft={testimonial.button.iconLeft}
-                      className="gap-2.5"
-                    >
-                      {testimonial.button.title}
-                    </Button>
+                   
                   </div>
                 </div>
               </CarouselItem>))}

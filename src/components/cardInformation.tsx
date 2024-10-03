@@ -15,6 +15,7 @@ type BlogPost = {
   title: string;
   description: string;
   button: ButtonProps;
+
 };
 
 type Props = {
@@ -33,8 +34,8 @@ export const Blog44 = (props: Blog44Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-0 md:py-24 lg:py-28">
-      <div className="container -translate-y-32">
+    <section id="relume" className="px-[5%] py-0 h-svh md:py-24 lg:py-28 -translate-y-44">
+      <div className="container">
         <div className="rb-12 mb-0 grid grid-cols-1 items-start justify-start gap-y-2
          md:mb-8 md:grid-cols-[1fr_max-content] md:items-end md:justify-between 
          md:gap-x-12 md:gap-y-4 lg:mb-20 lg:gap-x-20">
@@ -63,9 +64,6 @@ export const Blog44 = (props: Blog44Props) => {
               </div>
               <div className="flex w-full flex-1 flex-col justify-between px-5 py-6 md:p-6">
                 <div className="rb-4 mb-4 flex items-center">
-                 
-                
-                 
                 </div>
 
                 <div className="flex w-full flex-col items-start justify-start">
@@ -76,7 +74,7 @@ export const Blog44 = (props: Blog44Props) => {
                     size={post.button.size}
                     iconRight={post.button.iconRight}
                     iconLeft={post.button.iconLeft}
-                    className="mt-6 flex items-center justify-center gap-x-1"
+                    className="mt-6 flex items-center justify-center gap-x-1 hover:underline "
                   >
                     {post.button.title}
                   </Button>

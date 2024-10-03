@@ -48,8 +48,8 @@ export const Gallery19 = (props: Gallery19Props) => {
 
   return (
     <section className="">
-      <div className="px-[5%] py-0 md:py-24 lg:py-28 -translate-y-28">
-        <div className="container -translate-y-36">
+      <div className="px-[5%] py-0 md:py-24 lg:py-28 ">
+        <div className="container">
           <div className="rb-12 mb-12  md:mb-18 lg:mb-20">
             <h2 className="rb-5 mb-5 text-8xl sfont-bold md:mb-6 md:text-7xl lg:text-8xl">
               {heading}
@@ -115,29 +115,29 @@ export const Gallery19Defaults: Gallery19Props = {
   // Replace with your own image URLs and alt tags.
   images: [
     {
-      src: "src/assets/ai-generated-illustration-satellite-system-spaceships-around-illumination-earth_441362-5418.avif",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 1",
      
     },
     
     {
-      src: "src/assets/maxresdefault.jpg",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 2",
     },
     {
-      src: "src/assets/posters-astronomia.webp",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 3",
     },
     {
-      src: "src/assets/spatial.jpg",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 4",
     },
     {
-      src: "src/assets/tecnology.jpeg",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 5",
     },
     {
-      src: "src/assets/modern-3d-isometric-concept-of-online-education-for-banner-website-realistic-landing-page-template-illustration-online-learning-internet-course-remote-tutorial-on-mobile-phone-application-free-vector.jpg",
+      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
       alt: "Relume placeholder image 6",
     },
     {
