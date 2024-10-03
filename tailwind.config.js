@@ -20,6 +20,16 @@ export default {
       therciaty: 'url(src/assets/beneficio.jpg)',
       Second: 'url(src/assets/crap.svg)',
       firsty: 'url(src/assets/people.svg)'
+    },
+    screens:{
+      tb:'800px',
+      ios11:'414px',
+      ios12:'390px',
+      sus:'360px',
+      iosX:'375px',
+      iphad:'768px',
+      ip4:'820px'
+
     }
     },
   },

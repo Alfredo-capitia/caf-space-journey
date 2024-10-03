@@ -1,4 +1,4 @@
- import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+ import { Facebook, Instagram, Twitter, Youtube, X } from "lucide-react"
 import { Gallery19 } from "./components/card"
 import { Blog44 } from "./components/cardInformation"
 import { Testimonial23 } from "./components/depoimentClient"
@@ -134,8 +134,15 @@ import { useState } from "react"
    </div>
    {showModal && (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
-      <form action="" className="w-[640px] z-50 flex items-center justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
-        {/* <div className="h-[100%] bg-wapper w-[50%]"></div> */}
+      <form action="" className="w-[640px] transition-all ease-out z-50 block items-center p-3 justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
+        {/* <div className="h-[100%] bg-wa import { Facebook, Instagram, Twitter, Youtube,  } from "lucide-react"
+pper w-[50%]"></div> */}
+        <div className="flex justify-between items-center">
+          <img className="size-18" src="src/assets/crap.svg" alt="" />
+          <X onClick={closeModal} className="size-7"/>
+
+        </div>
+        <div className="flex items-center justify-center pb-5">
         <img className="w-[50%]" src="src/assets/people.svg" alt="" />
         <div className="flex flex-col flex-1 gap-5 font-Sans">
           <div>
@@ -156,6 +163,8 @@ import { useState } from "react"
            <button className="block w-full px-3 py-2 text-sm border  bg-slate-900 text-white rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" type="submit">Obter</button>
          
         </div>
+        </div>
+       
       </form>
     </div>
    ) }
