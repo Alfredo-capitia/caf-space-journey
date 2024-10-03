@@ -6,17 +6,26 @@ import { Header78 } from "./components/layoutScrollingSnap"
 import { Layout417 } from "./components/leave"
 import { Layout421Slot } from "./components/amazingScrolly"
 
+import { useState } from "react"
 
-function App() {
+  function App() {
+  const [showModal, setShowModal] = useState(false)
+  function openModal(){
+    setShowModal(true)
+    }
+    function closeModal(){
+    setShowModal(false)
+    }
   return (
-      // {/* // divisoria geral */}
+    <>
+       {/* // divisoria geral */}
     <div className="w-full min-h-max px-14">
       {/* header aplication */}
       <header className="h-42 flex items-center justify-between 
       w-full bg-white pt-4">
       <div className="bg-pattern h-24 w-24 bg-cover object-cover"></div>
       <div>
-        <button className="bg-zinc-300 p-3 rounded-xl text-base
+        <button onClick={openModal} className="bg-zinc-300 p-3 rounded-xl text-base
          text-zinc-900 hover:bg-zinc-200 transition-all
           ease-in">Obter Certificado</button>
       </div>
@@ -55,8 +64,6 @@ function App() {
   <Testimonial23 />
   <Layout417 />
         </section>
-
-
        <div className="px-18">
        <footer className="translate-y-0 border-y-2 border-t-background-alternative py-8 font-Sans">
           <div className="flex justify-between items-center translate-y-9 pb-12">
@@ -117,12 +124,45 @@ function App() {
       
       {/* content aplication */}
 
-      
+       
+       {/* modal aplication */}
+       
+       {/* modal aplication */}
+
     {/* // divisoria geral */}
 
    </div>
+   {showModal && (
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
+      <form action="" className="w-[640px] z-50 flex items-center justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
+        {/* <div className="h-[100%] bg-wapper w-[50%]"></div> */}
+        <img className="w-[50%]" src="src/assets/people.svg" alt="" />
+        <div className="flex flex-col flex-1 gap-5 font-Sans">
+          <div>
+          <label htmlFor="name" className="block text-xs font-medium mb-2">Nome:</label>
+          <input type="text" id="name" name="name" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
+          </div>
+
+          <div>
+          <label htmlFor="email" className="block text-xs font-medium mb-2">E-mail:</label>
+          <input type="email" id="email" name="email" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
+          </div>
+
+          <div>
+          <label htmlFor="number" className="block text-xs font-medium mb-2"> Number:</label>
+          <input type="tel" id="number" name="number" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />       
+           </div>
+
+           <button className="block w-full px-3 py-2 text-sm border  bg-slate-900 text-white rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" type="submit">Obter</button>
+         
+        </div>
+      </form>
+    </div>
+   ) }
+   </>
    
   )
 }
+
 
 export {App}

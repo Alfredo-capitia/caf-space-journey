@@ -17,7 +17,9 @@ export default {
     backgroundImage : {
       pattern:'url(src/assets/novologo.png)',
       wapper : 'url(src/assets/space.gif)' ,
-      therciaty: 'url(src/assets/beneficio.jpg)'
+      therciaty: 'url(src/assets/beneficio.jpg)',
+      Second: 'url(src/assets/crap.svg)',
+      firsty: 'url(src/assets/people.svg)'
     }
     },
   },
