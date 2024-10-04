@@ -19,18 +19,18 @@ export default {
       wapper : 'url(src/assets/space.gif)' ,
       therciaty: 'url(src/assets/beneficio.jpg)',
       Second: 'url(src/assets/crap.svg)',
-      firsty: 'url(src/assets/people.svg)'
+      firsty: 'url(src/assets/people.svg)',
+      lua: 'url(src/assets/lua2.png)'
     },
-    screens:{
-      tb:'800px',
-      ios11:'414px',
-      ios12:'390px',
-      sus:'360px',
-      iosX:'375px',
-      iphad:'768px',
-      ip4:'820px'
-
-    }
+    screens: {
+      sx:"360px",
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
     },
   },
   plugins: [],

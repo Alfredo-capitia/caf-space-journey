@@ -47,15 +47,15 @@ export const Gallery19 = (props: Gallery19Props) => {
   }, [api]);
 
   return (
-    <section className="">
+    <section className="sx:mt-[850px]">
       <div className="px-[5%] py-0 md:py-24 lg:py-28 ">
         <div className="container">
           <div className="rb-12 mb-12  md:mb-18 lg:mb-20">
-            <h2 className="rb-5 mb-5 text-8xl sfont-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h2 className="rb-5 mb-5 text-8xl font-bold md:mb-6 md:text-7xl sx:text-3xl sx:text-center sx:w-full  lg:text-8xl">
               {heading}
             </h2>
-            <p className="md:text-md w-[945px]">{description}</p>
-            <div className="flex gap-5 mt-8">
+            <p className="md:text-md w-[945px] sx:text-sm sx:w-full sx:text-center">{description}</p>
+            <div className="flex gap-5 mt-8 sx:hidden">
               <button className="bg-zinc-300 p-3 rounded-xl">{secondButton}</button>
               <button className= " text-zinc-900  hover:text-white transition-all ease-out hover:bg-zinc-600 p-3 rounded-xl">{button2}</button>
             </div>
