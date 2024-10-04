@@ -22,9 +22,9 @@ export const Header78 = (props: Header78Props) => {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container flex flex-col items-center">
-        <div className="rb-12 mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
-          <h1 className="mb-5 text-6xl w-[848px] font-bold md:mb-6 md:text-9xl sx:text-2xl sx:w-[400px] lg:text-10xl">{heading}</h1>
-          <p className="md:text-md sx:text-xs sx:w-full sx:px-8 ">{description}</p>
+        <div className="rb-12 mb-12 max-w-lg text-center md:mb-18 lg:items-start lg:mb-20">
+          <h1 className="mb-5 text-6xl w-[848px] font-bold md:mb-6 md:text-9xl  sx:text-2xl sx:w-[400px] lg:text-10xl lg:w-[848px] ">{heading}</h1>
+          <p className="md:text-md sx:text-xs sx:w-full sx:px-8 lg:text-base lg:px-10 lg:w-[746px]">{description}</p>
           <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
           
           </div>

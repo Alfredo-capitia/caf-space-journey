@@ -20,14 +20,16 @@ import { FooterComponet } from "./components/footer"
   return (
     <>
        {/* // divisoria geral */}
-    <div className="w-full min-h-max px-14 box-border sx:px-4">
+    <div className="w-full min-h-max px-14 box-border sx:px-4 lg:px-14">
       {/* header aplication */}
       <header className="h-42 flex items-center justify-between 
-      w-full sx:px-2 pt-4">
-      <div className="bg-pattern h-24 w-24 bg-cover object-cover sx:size-16"></div>
+      w-full sx:px-2 pt-4 lg:p-4">
+      <div className="bg-pattern size-24 bg-cover object-cover sx:size-16 lg:size-24"></div>
       <div>
         <button onClick={openModal} className="bg-zinc-300 p-3 rounded-xl text-base
-         text-zinc-900 hover:bg-zinc-200 transition-all sx:text-zinc-950 sx:hover:text-white sx:hover:bg-black sx:bg-zinc-300 sx:text-xs
+         text-zinc-900 hover:bg-zinc-200 transition-all sx:text-zinc-950
+          sx:hover:text-white sx:hover:bg-black sx:bg-zinc-300 sx:text-xs
+          lg:bg-zinc-300 lg:text-zinc-900 lg:hover:text-black lg:hover:bg-zinc-200 lg:text-md
           ease-in">Obter Certificado</button>
       </div>
       </header>
@@ -35,23 +37,23 @@ import { FooterComponet } from "./components/footer"
       {/* content aplication */}
       <section className="block items-center justify-center mt-3">
       
-        <div className="flex items-center sx:flex-col  sx:gap-6">
-          <div className="w-[650px] sx:w-full block items-center justify-center mt-24">
+        <div className="flex sx:block sx:gap-6 lg:flex lg:gap-4">
+          <div className="w-[650px] sx:w-full lg:w-[650px] block items-center justify-center mt-24 lg:mt-32">
             <h1 className="text-5xl text-left  w-[610px] font-medium
-             leading-tight sx:text-2xl sx:text-center sx:w-full sx:px-0
+             leading-tight sx:text-2xl sx:text-center sx:w-full sx:px-0 lg:text-7xl lg:text-left
              -tracking-normal">Explorando o Futuro da Educação Espacial</h1>
-            <p className="w-[500px] pt-8 sx:w-full sx:text-center sx:justify-center sx:text-xs sx:px-2">Nossa missão é inspirar e 
+            <p className="w-[500px] pt-8 sx:w-full sx:text-center  sx:justify-center sx:text-xs sx:px-2 lg:text-left lg:text-base">Nossa missão é inspirar e 
               capacitar as novas gerações através do conhecimento sobre o espaço. Junte-se a nós nessa jornada
                de descobertas eimport inovações que moldam o futuro da educação.</p>
-            <div className="flex items-center sx:flex-col gap-6 pt-8">
+            <div className="flex items-center lg:flex sx:block gap-6 pt-8  ">
             < button className="bg-zinc-300 transition-all ease-out
-             hover:bg-zinc-400 p-3 rounded-lg">Saiba mais</button>
+             hover:bg-zinc-400 p-3 rounded-lg sx:translate-x-[100%] lg:translate-x-[0%] ">Saiba mais</button>
             <button className="p-3 rounded-lg text-zinc-900
-             hover:bg-zinc-600 sx:hidden hover:text-zinc-100
+             hover:bg-zinc-600 sx:hidden lg:block hover:text-zinc-100
              transition-all ease-out">Inscrever-se</button>
             </div>
           </div>
-          <div className="flex1 h-[555px] w-[585px] bg-wapper sx:w-full
+          <div className="flex1 h-[555px] w-[585px] bg-wapper sx:w-full sx:mt-6 lg:mt-0 lg:w-[585px]
            rounded-3xl flex"></div>
         </div>
         {/* exploring content */}
@@ -64,7 +66,7 @@ import { FooterComponet } from "./components/footer"
   <Testimonial23 />
   <Layout417 />
         </section>
-       <div className="px-18">
+       <div className="px-18 sx:px-0">
       <FooterComponet />
              </div>
       

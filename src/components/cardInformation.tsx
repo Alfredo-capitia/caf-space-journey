@@ -34,7 +34,7 @@ export const Blog44 = (props: Blog44Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-0 h-svh md:py-24 lg:py-28 -translate-y-44 sx:-translate-y-0">
+    <section id="relume" className="px-[5%] py-0 h-svh md:py-24 lg:py-28 -translate-y-44 sx:-translate-y-0 lg:-translate-y-44">
       <div className="container">
         <div className="rb-12 mb-0 grid grid-cols-1 items-start justify-start gap-y-2
          md:mb-8 md:grid-cols-[1fr_max-content] md:items-end md:justify-between 

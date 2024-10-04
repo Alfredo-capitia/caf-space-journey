@@ -55,8 +55,8 @@ export const Testimonial23 = (props: Testimonial23Props) => {
   }, [api]);
 
   return (
-    <section id="relume" className="px-[5%] py-0 md:py-24 lg:py-28 translate-y-0 sx:mt-18" >
-      <div className="container -translate-y-16 sx:-translate-y-0">
+    <section id="relume" className="px-[5%] py-0 md:py-24 lg:py-28 translate-y-0 sx:mt-18 lg:mt-0" >
+      <div className="container -translate-y-16 sx:-translate-y-0 lg:-translate-y-16">
         <div className="container mb-8 max-w-lg text-center md:mb-18 lg:mb-20">
           <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h1>
           <p className="md:text-md sx:text-center">{description}</p>
