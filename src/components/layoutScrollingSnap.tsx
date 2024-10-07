@@ -23,14 +23,14 @@ export const Header78 = (props: Header78Props) => {
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container flex flex-col items-center">
         <div className="rb-12 mb-12 max-w-lg text-center md:mb-18 lg:items-start lg:mb-20">
-          <h1 className="mb-5 text-6xl w-[848px] font-bold md:mb-6 md:text-9xl  sx:text-2xl sx:w-[400px] lg:text-10xl lg:w-[848px] ">{heading}</h1>
+          <h1 className="mb-5 text-6xl w-[848px] font-bold md:mb-6 md:text-9xl  sx:text-3xl sx:w-[350px] lg:text-10xl lg:w-[848px] ">{heading}</h1>
           <p className="md:text-md sx:text-xs sx:w-full sx:px-8 lg:text-base lg:px-10 lg:w-[746px]">{description}</p>
           <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
           
           </div>
         </div>
 
-        <div className="flex w-screen justify-start overflow-hidden">
+        <div className="flex w-full justify-start overflow-hidden">
           <div className="grid shrink-0 grid-cols-1 gap-y-4">
             <div className="grid w-full animate-marquee-top auto-cols-fr grid-cols-2 gap-4 self-center">
               {[...new Array(2)].map((e, index) => (
@@ -38,7 +38,7 @@ export const Header78 = (props: Header78Props) => {
                   {images.map((image, imageIndex) => (
                     <div
                       key={imageIndex}
-                      className="relative w-[60vw] pt-[75%] sm:w-[18rem] md:w-[26rem]"
+                      className="relative w-full pt-[75%] sm:w-[18rem] md:w-[26rem]"
                     >
                       <img
                         className="absolute inset-0 h-full w-full object-cover"
@@ -77,7 +77,7 @@ export const Header78 = (props: Header78Props) => {
 
 export const Header78Defaults: Header78Props = {
   heading: "Como a Educação Espacial Funciona e Beneficia",
-  description: " A educação ,espacial utiliza o universo como uma ferramenta   de aprendizado, estimulando a curiosidade e a imaginação dos alunos.  Ao explorar conceitos astronômicos, os estudantes desenvolvem habilidades    críticas e   criativas que se aplicam em diversas áreas do conhecimento.",
+  description: " A educação espacial utiliza o universo como uma ferramenta   de aprendizado, estimulando a curiosidade e a imaginação dos alunos.  Ao explorar conceitos astronômicos, os estudantes desenvolvem habilidades    críticas e   criativas que se aplicam em diversas áreas do conhecimento.",
   
   images: [
     {

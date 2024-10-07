@@ -6,19 +6,54 @@ import { Header78 } from "./components/layoutScrollingSnap"
 import { Layout417 } from "./components/leave"
 import { Layout421Slot } from "./components/amazingScrolly"
 
+import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 import { useState } from "react"
 import { FooterComponet } from "./components/footer"
+import axios from "axios"
+
 
   function App() {
   const [showModal, setShowModal] = useState(false)
+  const [email, setEmail] = useState<string>("")
+  const [name, setName] = useState<string>("")
+  const [number, setNumber] = useState<string>("")
+
+  
   function openModal(){
     setShowModal(true)
-    }
-    function closeModal(){
+  }
+  function closeModal(){
     setShowModal(false)
-    }
+  }
+
+  async function getCerticate() {
+    try{
+     const response =  await  axios.post("https://certificate-yc03.onrender.com", {email , name , number});
+     console.log(response)
+     enqueueSnackbar('Sucesso Veirfica o teu email',{
+      variant:"success"
+
+    })
+
+    setEmail("")
+     setName("")
+     setNumber("")
+     closeModal()
+
+
+    }catch(error){
+      enqueueSnackbar('Erro ao obter o certificado!',{
+        variant:"error"
+      })
+      console.log(error)
+    } }
+
+  
+  
+
   return (
     <>
+    <SnackbarProvider />
        {/* // divisoria geral */}
     <div className="w-full min-h-max px-14 box-border sx:px-4 lg:px-14">
       {/* header aplication */}
@@ -78,37 +113,48 @@ import { FooterComponet } from "./components/footer"
        {/* modal aplication */}
 
     {/* // divisoria geral */}
-
+  
    </div>
    {showModal && (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
-      <form action="" className="w-[640px] transition-all ease-out z-50 block items-center p-3 justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
-        {/* <div className="h-[100%] bg-wa import { Facebook, Instagram, Twitter, Youtube,  } from "lucide-react"
-pper w-[50%]"></div> */}
+    <div className="fixed inset-0 bg-black/60 w-full flex px-6 items-center justify-center sx:mx-auto">
+      <form onSubmit={(e)=>{
+        e.preventDefault()
+        getCerticate()
+      }} className="w-[640px] transition-all sx:w-[300px] z-50 ease-out lg:w-[640px] block items-center p-3 justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
         <div className="flex justify-between items-center">
           <img className="size-18" src="src/assets/charp.svg" alt="" />
           <X onClick={closeModal} className="size-7"/>
 
         </div>
         <div className="flex items-center justify-center pb-5">
-        <img className="w-[50%]" src="src/assets/people.svg" alt="" />
+        <img className="w-[50%] sx:hidden sm:block" src="src/assets/people.svg" alt="" />
         <div className="flex flex-col flex-1 gap-5 font-Sans">
           <div>
           <label htmlFor="name" className="block text-xs font-medium mb-2">Nome:</label>
-          <input type="text" id="name" name="name" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
+          <input value={name} onChange={(e)=>{
+            setName(e.target.value)
+          }} type="text" id="name" name="name" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
           </div>
 
           <div>
           <label htmlFor="email" className="block text-xs font-medium mb-2">E-mail:</label>
-          <input type="email" id="email" name="email" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
+          <input value={email}  onChange={(e)=>{
+            setEmail(e.target.value)
+          }}  type="email" id="email" name="email" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
           </div>
 
           <div>
-          <label htmlFor="number" className="block text-xs font-medium mb-2"> Number:</label>
-          <input type="tel" id="number" name="number" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />       
+          <label htmlFor="number"  className="block text-xs font-medium mb-2"> Number:</label>
+          <input value={number}   onChange={(e)=>{
+            setNumber(e.target.value)
+          }}  type="tel" id="number" name="number" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />       
            </div>
 
-           <button className="block w-full px-3 py-2 text-sm border  bg-slate-900 text-white rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" type="submit">Obter</button>
+           <button  className="block w-full px-3 py-2 text-sm border 
+           bg-slate-900 text-white rounded-xl focus:outline-none focus:ring-zinc-500 
+           focus:border-zinc-500" type="submit">
+            Obter 
+           </button>
          
         </div>
         </div>
@@ -120,6 +166,4 @@ pper w-[50%]"></div> */}
    
   )
 }
-
-
 export {App}

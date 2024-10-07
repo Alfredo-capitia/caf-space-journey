@@ -47,7 +47,7 @@ export const Gallery19 = (props: Gallery19Props) => {
   }, [api]);
 
   return (
-    <section className="sx:mt-[850px] lg:-mt-6">
+    <section className="sx:mt-[850px] lg:-mt-[90px]">
       <div className="px-[5%] py-0 md:py-24 lg:py-28 ">
         <div className="container">
           <div className="rb-12 mb-12  md:mb-18 lg:mb-20">
