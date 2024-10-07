@@ -17,6 +17,7 @@ import axios from "axios"
   const [email, setEmail] = useState<string>("")
   const [name, setName] = useState<string>("")
   const [number, setNumber] = useState<string>("")
+  const [loading, setLoading] = useState(false)
 
   
   function openModal(){
@@ -27,10 +28,12 @@ import axios from "axios"
   }
 
   async function getCerticate() {
+    setLoading(true)
     try{
+    
      const response =  await  axios.post("https://certificate-yc03.onrender.com", {email , name , number});
      console.log(response)
-     enqueueSnackbar('Sucesso Veirfica o teu email',{
+     enqueueSnackbar('Sucesso , será enviado um link pra o seu email pra obteres o seu Certificado !',{
       variant:"success"
 
     })
@@ -41,11 +44,13 @@ import axios from "axios"
      closeModal()
 
 
-    }catch(error){
+    }catch{
       enqueueSnackbar('Erro ao obter o certificado!',{
         variant:"error"
       })
-      console.log(error)
+    
+    }finally{
+      setLoading(false)
     } }
 
   
@@ -80,9 +85,9 @@ import axios from "axios"
             <p className="w-[500px] pt-8 sx:w-full sx:text-center  sx:justify-center sx:text-xs sx:px-2 lg:text-left lg:text-base">Nossa missão é inspirar e 
               capacitar as novas gerações através do conhecimento sobre o espaço. Junte-se a nós nessa jornada
                de descobertas eimport inovações que moldam o futuro da educação.</p>
-            <div className="flex items-center lg:flex sx:block gap-6 pt-8  ">
+            <div className="flex items-center lg:flex sx:block sx:items-center sx:justify-center sx:text-center lg:justify-start gap-6 pt-8  ">
             < button className="bg-zinc-300 transition-all ease-out
-             hover:bg-zinc-400 p-3 rounded-lg sx:translate-x-[100%] lg:translate-x-[0%] ">Saiba mais</button>
+             hover:bg-zinc-400 p-3 rounded-lg  lg:translate-x-[0%] ">Saiba mais</button>
             <button className="p-3 rounded-lg text-zinc-900
              hover:bg-zinc-600 sx:hidden lg:block hover:text-zinc-100
              transition-all ease-out">Inscrever-se</button>
@@ -131,21 +136,21 @@ import axios from "axios"
         <div className="flex flex-col flex-1 gap-5 font-Sans">
           <div>
           <label htmlFor="name" className="block text-xs font-medium mb-2">Nome:</label>
-          <input value={name} onChange={(e)=>{
+          <input value={name} required onChange={(e)=>{
             setName(e.target.value)
           }} type="text" id="name" name="name" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
           </div>
 
           <div>
           <label htmlFor="email" className="block text-xs font-medium mb-2">E-mail:</label>
-          <input value={email}  onChange={(e)=>{
+          <input value={email} required onChange={(e)=>{
             setEmail(e.target.value)
           }}  type="email" id="email" name="email" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />
           </div>
 
           <div>
           <label htmlFor="number"  className="block text-xs font-medium mb-2"> Number:</label>
-          <input value={number}   onChange={(e)=>{
+          <input value={number} required  onChange={(e)=>{
             setNumber(e.target.value)
           }}  type="tel" id="number" name="number" className="block w-full px-3 py-2 text-sm text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-zinc-500 focus:border-zinc-500" />       
            </div>
@@ -153,7 +158,7 @@ import axios from "axios"
            <button  className="block w-full px-3 py-2 text-sm border 
            bg-slate-900 text-white rounded-xl focus:outline-none focus:ring-zinc-500 
            focus:border-zinc-500" type="submit">
-            Obter 
+            {loading? "carregando...":"Obter"}
            </button>
          
         </div>
