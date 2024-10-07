@@ -33,7 +33,7 @@ export const Header78 = (props: Header78Props) => {
         <div className="flex w-screen justify-start overflow-hidden">
           <div className="grid shrink-0 grid-cols-1 gap-y-4">
             <div className="grid w-full animate-marquee-top auto-cols-fr grid-cols-2 gap-4 self-center">
-              {[...new Array(2)].map((e, index) => (
+              {[...new Array(2)].map((index) => (
                 <div key={index} className="grid w-full grid-flow-col gap-4">
                   {images.map((image, imageIndex) => (
                     <div
@@ -51,7 +51,7 @@ export const Header78 = (props: Header78Props) => {
               ))}
             </div>
             <div className="grid w-full animate-marquee-bottom grid-cols-2 gap-4 self-center">
-              {[...new Array(2)].map((e, index) => (
+              {[...new Array(2)].map(( index) => (
                 <div key={index} className="grid w-full grid-flow-col gap-4">
                   {images.map((image, imageIndex) => (
                     <div
