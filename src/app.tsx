@@ -4,7 +4,7 @@ import { Blog44 } from "./components/cardInformation"
 import { Testimonial23 } from "./components/depoimentClient"
 import { Header78 } from "./components/layoutScrollingSnap"
 import { Layout417 } from "./components/leave"
-import { Layout421Slot } from "./components/amazingScrolly"
+// import { Layout421Slot } from "./components/amazingScrolly"
 
 import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 import { useState } from "react"
@@ -99,7 +99,7 @@ import axios from "axios"
         {/* exploring content */}
         {/* education content  */}
               {/* card content  */}
-   <Layout421Slot/>
+   
         <Header78 />
   <Blog44 />
   <Gallery19/>
