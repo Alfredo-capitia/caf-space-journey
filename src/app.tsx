@@ -33,7 +33,7 @@ import axios from "axios"
     
      const response =  await  axios.post("https://certificate-yc03.onrender.com", {email , name , number});
      console.log(response)
-     enqueueSnackbar(`Sucesso , O Certificado será enviado pra este email ${email} !`,{
+     enqueueSnackbar(`Sucesso , O Certificado será enviado pra este email : ${email} !`,{
       variant:"success"
 
     })
