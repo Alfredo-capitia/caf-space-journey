@@ -97,7 +97,7 @@ export const Blog44Defaults: Blog44Props = {
   button: { title: "", variant: "secondary" },
   blogPosts: [
     {
-      url: "https://ensino.digital/blog/a-importancia-da-pedagogia-especial-nas-escolas",
+      url: "https://www.scielo.br/j/rbef/a/XyVRW9smxrHtgtrk5KGrvGq/",
       image: {
         src: "/assets/beneficio.jpg",
         alt: "Relume placeholder image 1",
