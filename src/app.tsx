@@ -127,12 +127,12 @@ import axios from "axios"
         getCerticate()
       }} className="w-[640px] transition-all sx:w-[300px] z-50 ease-out lg:w-[640px] block items-center p-3 justify-center text-zinc-900 bg-zinc-50 rounded-xl px-5 py-6">
         <div className="flex justify-between items-center">
-          <img className="size-18" src="src/assets/charp.svg" alt="" />
+          <img className="size-18" src="/assets/charp.svg" alt="" />
           <X onClick={closeModal} className="size-7"/>
 
         </div>
         <div className="flex items-center justify-center pb-5">
-        <img className="w-[50%] sx:hidden sm:block" src="src/assets/people.svg" alt="" />
+        <img className="w-[50%] sx:hidden sm:block" src="/assets/people.svg" alt="" />
         <div className="flex flex-col flex-1 gap-5 font-Sans">
           <div>
           <label htmlFor="name" className="block text-xs font-medium mb-2">Nome:</label>
