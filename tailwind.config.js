@@ -15,12 +15,12 @@ export default {
       Sans : 'inter'
     },
     backgroundImage : {
-      pattern:'url(src/assets/novologo.png)',
-      wapper : 'url(src/assets/space.gif)' ,
-      therciaty: 'url(src/assets/beneficio.jpg)',
-      Second: 'url(src/assets/crap.svg)',
-      firsty: 'url(src/assets/people.svg)',
-      lua: 'url(src/assets/lua2.png)'
+      pattern:'url(/assets/novologo.png)',
+      wapper : 'url(/assets/space.gif)' ,
+      therciaty: 'url(/assets/beneficio.jpg)',
+      Second: 'url(/assets/crap.svg)',
+      firsty: 'url(/assets/people.svg)',
+      lua: 'url(/assets/lua2.png)'
     },
     screens: {
       sx:"360px",
