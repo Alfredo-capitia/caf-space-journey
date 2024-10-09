@@ -106,7 +106,7 @@ const FeatureSection = ({
 };
 
 export const Layout417Defaults: Layout417Props = {
-  heading: "Heading here",
+  heading: "Reals",
   featureSections: [
     {
       icon: {
