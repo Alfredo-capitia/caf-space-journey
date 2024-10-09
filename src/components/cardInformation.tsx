@@ -99,7 +99,7 @@ export const Blog44Defaults: Blog44Props = {
     {
       url: "https://ensino.digital/blog/a-importancia-da-pedagogia-especial-nas-escolas",
       image: {
-        src: "src/assets/beneficio.jpg",
+        src: "/assets/beneficio.jpg",
         alt: "Relume placeholder image 1",
       },
       category: "",
@@ -117,7 +117,7 @@ export const Blog44Defaults: Blog44Props = {
     {
       url: "https://educamundo.com.br/blog/como-a-educacao-especial-e-inclusiva-transforma-o-ensino-2/",
       image: {
-        src: "src/assets/Estudar-e-Aprender-a-Distancia-7-1024x576.webp",
+        src: "/assets/Estudar-e-Aprender-a-Distancia-7-1024x576.webp",
         alt: "Relume placeholder image 2",
       },
       category: "Category",
@@ -135,7 +135,7 @@ export const Blog44Defaults: Blog44Props = {
     {
       url: "https://porvir.org/astronomia-na-sala-de-aula-ideias-para-incluir-o-tema-no-curriculo/",
       image: {
-        src: "src/assets/when-everything-goes-right-in-the-classroom-190612.jpg",
+        src: "/assets/when-everything-goes-right-in-the-classroom-190612.jpg",
         alt: "Relume placeholder image 3",
       },
       category: "Category",
